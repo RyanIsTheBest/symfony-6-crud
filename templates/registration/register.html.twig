@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+<!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    {% endblock %}
+
+
+
+{% block body %}
+<style>
+    .padlock-icon1 {float: left;}
+    .register-button {padding-left: 190px; padding-right: 190px; border-radius: 20px; background-color: rgb(36,136,270); color: white; border: none; padding-bottom: 5px; padding-top: 5px;}
+    div.main-div-form-2 {margin-left: 100px;}
+    div.main-div-form-1 {border-radius: 10px;border-color: rgb(234,234,234);border-style: solid; border-width: 2px; background-color: rgb(238,238,238); text-align: center; padding-right: 100px; margin-left: 550px; margin-right: 550px; padding-bottom: 50px; padding-top: 50px;}
+</style>
+<br>
+<div class="main-div-form-1">
+    <br>
+    <img style="width: 200px; height: auto; padding-bottom: 30px; margin-left: 90px;"src="{{ asset("images/ruscrud-logo-mainpage-1.png") }}">
+    <div class="main-div-form-2">
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+
+
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        
+        <p>Already have an account? <a href="{{ path('app_login')}}">Sign in here</a>.</p>
+        <button type="submit" class="register-button"><i class="bi bi-lock"></i>Register</button>
+    {{ form_end(registrationForm) }}
+    </div>
+</div>
+{% endblock %}

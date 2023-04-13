@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome to my site{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .welcome_h1 {text-align: center; padding-top: 25px;}
+    .p_homepage_1 {text-align: center; font-weight: 500;}
+    .getstarted_button_mainpage_1 {text-align: center; margin-left: 49em; border-radius: 50px;  padding: 10px 45px; background-color: rgb(31,104,255); color: white; border-color: rgb(31,104,255); border: none;}
+</style>
+
+
+<body>
+    <br>
+    <img style="width: 400px; height: auto; margin-left: 675px;"src="{{ asset('images/ruscrud-logo-mainpage-1.png') }}">
+    <h1 class="welcome_h1">Organise better. Think better. Be better</h1>
+    <p class="p_homepage_1">With the help of Ruscrud you can change the world</p>
+    <br>
+    <a href="{{ path('app_project_index') }}"><button class="getstarted_button_mainpage_1">Get Started</button></a>
+</body>
+{% endblock %}
+
